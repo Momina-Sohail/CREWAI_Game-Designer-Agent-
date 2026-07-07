@@ -2,7 +2,7 @@ Game Designer Agent
 
 ## What Does This Do?
 
-This project is an AI agent that acts like a game designer. You give it a simple instruction, and it writes complete, ready-to-run Python code for a simple educational game — designed to help kids and teens learn subjects like history and math while playing, instead of just reading.
+This project is an AI agent that acts like a game designer. You give it a simple instruction, and it writes complete, ready-to-run Python code for a simple educational game. It is designed to help kids and teens learn subjects like history and math while playing, instead of just reading.
 
 Instead of just explaining what a game could look like, it actually writes the full code for the game: the game screen, the questions, clicking to answer, and keeping score.
 
