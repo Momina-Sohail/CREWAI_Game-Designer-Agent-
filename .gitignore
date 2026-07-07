@@ -1,0 +1,8 @@
+.env
+__pycache__/
+*.pyc
+*.pyo
+.streamlit/secrets.toml
+main_output.txt
+test_output.txt
+Game Designer Agent/
