@@ -16,4 +16,4 @@ Instead of just explaining what a game could look like, it actually writes the f
 
 ## Example Output
 
-When you run it, the agent writes a simple quiz game — it shows a question with multiple answers, lets you click one, and keeps track of your score as you go.
+When you run it, the agent writes a simple quiz game. It shows a question with multiple answers, lets you click one and keeps track of your score as you go.
