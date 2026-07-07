@@ -1,22 +1,13 @@
-# variable
-
-# name = "John"
-# num1 = 5
-# bool = True/False
-# floating number = 3.14
-
-
 from crewai import Agent,Task,Crew,LLM
 from dotenv import load_dotenv
 import os
 load_dotenv()
 
-# Monkey patch to remove cache_breakpoint from Groq calls
 import litellm
 original_completion = litellm.completion
 
 def patched_completion(*args, **kwargs):
-    # Remove cache_breakpoint from messages if present
+   
     if 'messages' in kwargs:
         for msg in kwargs['messages']:
             if isinstance(msg, dict) and 'cache_breakpoint' in msg:
@@ -25,7 +16,7 @@ def patched_completion(*args, **kwargs):
 
 litellm.completion = patched_completion
 
-llm = LLM(model="groq/llama-3.1-8b-instant",
+llm = LLM(model="groq/llama-3.3-70b-versatile",
           api_key = os.getenv("GROQ_API_KEY"),
           max_tokens=4096
 )
@@ -38,15 +29,16 @@ game_designer_agent=Agent(
 )
 
 game_designer_task = Task(
-    description="you are a game designer developer which have 15 years of experience in gaming industry and love to build text based game for kids",
-    expected_output="you are a game designer developer",
+    description="Write complete, runnable Python code using pygame for a text-based "
+        "educational game (history or math) for kids. Include a game loop, "
+        "scoring, and clear instructions.",
+    expected_output="Complete, runnable pygame code with no placeholders or partial snippets.",
     agent = game_designer_agent
 )
 
 crew = Crew(
     agents=[game_designer_agent],
-    tasks=[game_designer_task],
-    llm=llm
+    tasks=[game_designer_task]
 )
 
 result = crew.kickoff()
