@@ -18,3 +18,5 @@ Instead of just explaining what a game could look like, it actually writes the f
 ## Example Output
 
 When you run it, the agent writes a simple quiz game. It shows a question with multiple answers, lets you choose one (by clicking or using the keyboard, depending on the run), and keeps track of your score as you go.
+
+Note: since the code is generated fresh by the AI each time, small details like how you select an answer can vary slightly between runs.
