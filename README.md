@@ -9,7 +9,7 @@ Instead of just explaining what a game could look like, it actually writes the f
 ## How It Works
 
 1. An **AI agent** is set up and told to act like an experienced game designer.
-2. It's given clear instructions on what to create: a complete, working game — not just an idea or description.
+2. It's given clear instructions on what to create: a complete, working game not just an idea or description.
 3. The agent uses **Groq**, a fast AI model, to actually write the code.
 4. A small fix is included in the code to make sure the AI model and the tool talking to it work together properly.
 5. When you run the script, the agent writes out the full game code, which you can then save and run yourself.
